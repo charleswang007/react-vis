@@ -41,18 +41,28 @@ const totalValues = 100;
  * @returns {Array} Array of data.
  * @private
  */
-function getRandomSeriesData(total) {
+function getRandomDiastolicSeriesData(total) {
   const result = [];
-  let lastY = Math.random() * 40 - 20;
   let y;
-  const firstY = lastY;
   for (let i = 0; i < total; i++) {
-    y = Math.random() * firstY - firstY / 2 + lastY;
+    y = Math.random() * 40 + 50;
     result.push({
       x: i,
       y
     });
-    lastY = y;
+  }
+  return result;
+}
+
+function getRandomSystolicSeriesData(total) {
+  const result = [];
+  let y;
+  for (let i = 0; i < total; i++) {
+    y = Math.random() * 50 + 90;
+    result.push({
+      x: i,
+      y
+    });
   }
   return result;
 }
@@ -63,14 +73,14 @@ export default class ZoomableChartExample extends React.Component {
     lastDrawLocation: null,
     series: [
       {
-        title: 'Apples',
+        title: 'Systolic Blood Pressure',
         disabled: false,
-        data: getRandomSeriesData(totalValues)
+        data: getRandomSystolicSeriesData(totalValues)
       },
       {
-        title: 'Bananas',
+        title: 'Diastolic Blood Pressure',
         disabled: false,
-        data: getRandomSeriesData(totalValues)
+        data: getRandomDiastolicSeriesData(totalValues)
       }
     ]
   }
