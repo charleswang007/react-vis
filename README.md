@@ -2,7 +2,7 @@
 
 ![alt tag](https://i.imgur.com/1tLnUcF.png)
 
-# heroku
+## heroku
 
 [http://react-vis.herokuapp.com/](http://react-vis.herokuapp.com/)
 
