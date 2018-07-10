@@ -6,6 +6,11 @@
 
 [http://react-vis.herokuapp.com/](http://react-vis.herokuapp.com/)
 
+## run locally
+
+cd to ./my-app
+node start
+
 ## reference
 
 [https://github.com/uber/react-vis/tree/master/showcase/examples](https://github.com/uber/react-vis/tree/master/showcase/examples)
